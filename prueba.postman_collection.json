@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "a5e43679-bd0f-4639-8f04-bd632205f584",
+		"name": "prueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48089757",
+		"_collection_link": "https://juanestrol123-9961187.postman.co/workspace/470fa807-a3bd-42a9-8f30-2344efed5a4e/collection/48089757-a5e43679-bd0f-4639-8f04-bd632205f584?action=share&source=collection_link&creator=48089757"
+	},
+	"item": [
+		{
+			"name": "Ver todos los pedidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/orders",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marcar un pedido pendiente como enviado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/orders/1/ship",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						"1",
+						"ship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enviar un pedido cancelado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/orders/3/ship",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						"3",
+						"ship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enviar otro pedido ya enviado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/orders/4/ship",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						"4",
+						"ship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pedido inexistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/orders/9999/ship",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders",
+						"9999",
+						"ship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/orders",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
